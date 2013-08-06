@@ -69,7 +69,8 @@
 <script src="freq-analysis.js"></script>
 <script>
 'use strict';
-/* RUNNING CODE */
+
+// Some running code example.
 
 var spectrumElemenet = document.getElementById('bar-row');
 var rangeElement = document.getElementById('range');
@@ -80,6 +81,8 @@ document.getElementById('start').addEventListener('click', function(e) { foo.sta
 document.getElementById('stop').addEventListener('click', function(e) { foo.stopInput(); });
 document.getElementById('log').addEventListener('click', function(e) { console.log(foo.freqData); });
 
+
+// These options call for a oscillator sound source.
 var options = {
     input: Input.OSCILLATOR,
     freq: 200,
@@ -87,6 +90,8 @@ var options = {
     playback: true
 }
 
+// The task to be run is in this case just a showcase of the frequencies played back.
+// Note: This implementation might be tough on your machine.
 var task = function() {
     var html = '';
     var n = this.freqData.length;
@@ -97,6 +102,7 @@ var task = function() {
     spectrumElemenet.innerHTML = html;
 }
 
+// Initialise the Analyser.
 var foo = new Analyser(options, task);
 
 </script>
