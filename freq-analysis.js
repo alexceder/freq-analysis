@@ -1,5 +1,3 @@
-(function() {
-
 'use strict';
 
 var Input = {
@@ -124,4 +122,4 @@ Analyser.prototype.task = function() {
     this.task();
 }
 
-})();
+//})();
